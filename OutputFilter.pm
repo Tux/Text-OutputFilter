@@ -70,7 +70,7 @@ H.Merijn Brand <h.m.brand@procura.nl>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2006-2007 H.Merijn Brand for PROCURA B.V.
+Copyright (C) 2006-2008 H.Merijn Brand for PROCURA B.V.
 
 This library is not free software; you can't redistribute it
 
