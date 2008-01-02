@@ -13,6 +13,10 @@ my %wm = (
     AUTHOR       => "H.Merijn Brand <h.merijn\@procura.nl>",
     LICENSE	 => "perl",
     VERSION_FROM => "OutputFilter.pm",
+    PREREQ_PM	 => {
+	Carp		=> 0,
+	Test::More	=> 0,
+	},
     );
 
 my $rv = WriteMakefile (%wm);
