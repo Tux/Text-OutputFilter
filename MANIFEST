@@ -11,3 +11,4 @@ t/50_sub.t
 t/60_filter.t
 t/70_misc.t
 t/80_error.t
+examples/box.pl
