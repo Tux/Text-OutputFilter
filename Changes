@@ -1,6 +1,6 @@
 Revision history for Text::OutputFilter
 
-0*14	Wed 07 Jan 2009
+0.14	Wed 07 Jan 2009
 
     - Copyright 2009
     - Made the license as in perl. Was still accidentally restricted
