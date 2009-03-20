@@ -14,8 +14,9 @@ my %wm = (
     LICENSE	 => "perl",
     VERSION_FROM => "OutputFilter.pm",
     PREREQ_PM	 => {
-	"Carp"		=> 0,
-	"Test::More"	=> 0,
+	"Carp"			=> 0,
+	"Test::More"		=> 0,
+	"Test::NoWarnings"	=> 0,
 	},
     );
 

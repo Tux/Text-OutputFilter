@@ -1,5 +1,9 @@
 Revision history for Text::OutputFilter
 
+0.15	Wed 07 Jan 2009
+
+    - Added Test::NoWarnings
+
 0.14	Wed 07 Jan 2009
 
     - Copyright 2009
