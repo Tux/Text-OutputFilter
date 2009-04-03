@@ -61,29 +61,31 @@ else {
 
 __END__
 --- #YAML:1.1
-name:                 Text::OutputFilter
-version:              VERSION
-abstract:             Filter and modify output
-license:              perl
+name:                    Text::OutputFilter
+version:                 VERSION
+abstract:                Filter and modify output
+license:                 perl
 author:              
     - H.Merijn Brand <h.m.brand@xs4all.nl>
-generated_by:         Author
-distribution_type:    module
+generated_by:            Author
+distribution_type:       module
 provides:
     Text::OutputFilter:
-        file:         OutputFilter.pm
-        version:      VERSION
+        file:            OutputFilter.pm
+        version:         VERSION
 requires:     
-    perl:             5.008
-    Carp:             0
+    perl:                5.008
+    Carp:                0
+configure_requires:
+    ExtUtils::MakeMaker: 0
 build_requires:
-    perl:             5.008
-    Test::Harness:    0
-    Test::More:       0
-    Test::NoWarnings: 0
+    perl:                5.008
+    Test::Harness:       0
+    Test::More:          0
+    Test::NoWarnings:    0
 resources:
-    license:          http://dev.perl.org/licenses/
-    repository:       http://repo.or.cz/w/Text-OutputFilter.git
+    license:             http://dev.perl.org/licenses/
+    repository:          http://repo.or.cz/w/Text-OutputFilter.git
 meta-spec:
-    version:          1.4
-    url:              http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:             1.4
+    url:                 http://module-build.sourceforge.net/META-spec-v1.4.html
