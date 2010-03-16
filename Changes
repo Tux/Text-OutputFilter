@@ -4,6 +4,7 @@ Revision history for Text::OutputFilter
 
     - Added Test::NoWarnings
     - Dropped YAML spec to 1.0
+    - Upped copyright to 2010
 
 0.14	Wed 07 Jan 2009
 
