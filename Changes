@@ -1,5 +1,9 @@
 Revision history for Text::OutputFilter
 
+0.16	Wed 11 Aug 2010
+
+    - Spell checks
+
 0.15	Tue 16 Mar 2010
 
     - Added Test::NoWarnings

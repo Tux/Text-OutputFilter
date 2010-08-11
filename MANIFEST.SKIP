@@ -1,7 +1,9 @@
 \.git
+\.releaserc
 blib/
 cover_db/
 sandbox/
 Makefile
 MANIFEST.SKIP
 pm_to_blib
+\.aspell\.local\.pws

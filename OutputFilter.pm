@@ -3,7 +3,7 @@ package Text::OutputFilter;
 use strict;
 use warnings;
 
-our $VERSION = 0.15;
+our $VERSION = 0.16;
 
 =head1 NAME
 
@@ -34,7 +34,7 @@ buffered. The C<tie> takes three optional arguments:
 
 The left margin must be a positive integer and defaults to C<4> spaces.
 
-=item Output Streem
+=item Output Stream
 
 The output stream must be an already open stream, with writing
 enabled. The default is C<*STDOUT>. All input methods on the new
@@ -77,7 +77,7 @@ it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
-perl(1), perlopen, 'open STDOUT, "|-"', Text::Filter
+perl(1), perlopen(1), 'open STDOUT, "|-"', Text::Filter
 
 =cut
 
