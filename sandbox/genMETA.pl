@@ -11,57 +11,30 @@ GetOptions (
     "v|verbose:1"	=> \$opt_v,
     ) or die "usage: $0 [--check]\n";
 
-my $version;
-open my $pm, "<", "OutputFilter.pm" or die "Cannot read OutputFilter.pm";
-while (<$pm>) {
-    m/^our .VERSION\s*=\s*"?([-0-9._]+)"?\s*;\s*$/ or next;
-    $version = $1;
-    last;
-    }
-close $pm;
+use lib "sandbox";
+use genMETA;
+my $meta = genMETA->new (
+    from    => "OutputFilter.pm",
+    verbose => $opt_v,
+    );
 
-my @yml;
-while (<DATA>) {
-    s/VERSION/$version/o;
-    push @yml, $_;
-    }
+$meta->from_data (<DATA>);
 
 if ($check) {
-    use YAML::Syck;
-    use Test::YAML::Meta::Version;
-    my $h;
-    my $yml = join "", @yml;
-    eval { $h = Load ($yml) };
-    $@ and die "$@\n";
-    $opt_v and print Dump $h;
-    my $t = Test::YAML::Meta::Version->new (yaml => $h);
-    $t->parse () and die join "\n", $t->errors, "";
-
-    use Parse::CPAN::Meta;
-    eval { Parse::CPAN::Meta::Load ($yml) };
-    $@ and die "$@\n";
-
-    my $req_vsn = $h->{requires}{perl};
-    print "Checking if $req_vsn is still OK as minimal version for examples\n";
-    use Test::MinimumVersion;
-    # All other minimum version checks done in xt
-    all_minimum_version_ok ($req_vsn, { paths =>
-	[ "t", "examples", "OutputFilter.pm", "Makefile.PL" ]});
+    $meta->check_encoding ();
+    $meta->check_required ();
+    $meta->check_minimum ([ "t", "examples", "OutputFilter.pm", "Makefile.PL" ]);
     }
 elsif ($opt_v) {
-    print @yml;
+    $meta->print_yaml ();
     }
 else {
-    my @my = glob <*/META.yml>;
-    @my == 1 && open my $my, ">", $my[0] or die "Cannot update META.yml\n";
-    print $my @yml;
-    close $my;
-    chmod 0644, glob <*/META.yml>;
+    $meta->fix_meta ();
     }
 
 __END__
 --- #YAML:1.0
-name:                    Text::OutputFilter
+name:                    Text-OutputFilter
 version:                 VERSION
 abstract:                Filter and modify output
 license:                 perl
@@ -77,11 +50,10 @@ requires:
     perl:                5.008
     Carp:                0
 recommends:     
-    perl:                5.010001
+    perl:                5.014001
 configure_requires:
     ExtUtils::MakeMaker: 0
-build_requires:
-    perl:                5.008
+test_requires:
     Test::Harness:       0
     Test::More:          0
     Test::NoWarnings:    0
