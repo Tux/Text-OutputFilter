@@ -14,11 +14,12 @@ my %wm = (
     AUTHOR       => "H.Merijn Brand <h.m.brand\@xs4all.nl>",
     LICENSE	 => "perl",
     VERSION_FROM => "OutputFilter.pm",
-    PREREQ_PM	 => {
-	"Carp"			=> 0,
-	"Test::More"		=> 0,
-	"Test::NoWarnings"	=> 0,
-	},
+    PREREQ_PM	 => { "Carp"			=> 0,
+		      "Test::More"		=> 0,
+		      "Test::NoWarnings"	=> 0,
+		      },
+    macro        => { TARFLAGS => "--format=ustar -c -v -f",
+		      },
     );
 
 my $rv = WriteMakefile (%wm);
