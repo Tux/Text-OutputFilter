@@ -63,7 +63,6 @@ sub postamble
 	'',
 	'fixmeta:	distmeta',
 	'	perl sandbox/genMETA.pl',
-	'	ls -l */META.yml',
 	'',
 	'tgzdist:	checkmeta fixmeta $(DISTVNAME).tar.gz distcheck',
 	'	-@mv -f $(DISTVNAME).tar.gz $(DISTVNAME).tgz',

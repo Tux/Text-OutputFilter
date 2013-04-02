@@ -1,4 +1,6 @@
 \.git
+\.tgz$
+\.tar\.gz$
 \.releaserc
 blib/
 cover_db/
