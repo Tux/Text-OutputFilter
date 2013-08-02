@@ -54,7 +54,6 @@ recommends:
 configure_requires:
     ExtUtils::MakeMaker: 0
 test_requires:
-    Test::Harness:       0
     Test::More:          0
     Test::NoWarnings:    0
 resources:
