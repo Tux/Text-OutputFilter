@@ -24,6 +24,7 @@ if ($check) {
     $meta->check_encoding ();
     $meta->check_required ();
     $meta->check_minimum ([ "t", "examples", "OutputFilter.pm", "Makefile.PL" ]);
+    $meta->done_testing ();
     }
 elsif ($opt_v) {
     $meta->print_yaml ();
@@ -50,7 +51,7 @@ requires:
     perl:                5.008
     Carp:                0
 recommends:     
-    perl:                5.016003
+    perl:                5.018001
 configure_requires:
     ExtUtils::MakeMaker: 0
 test_requires:
