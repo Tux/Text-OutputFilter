@@ -1,7 +1,8 @@
-0.18	- 01 Jan 2014, H.Merijn Brand
+0.18	- 07 Feb 2014, H.Merijn Brand
     * Upped copyright to 2012
     * Upped copyright to 2013
     * Upped copyright to 2014
+    * Updated META specs to Lancaster consensus (administrative release)
 
 0.17	- 07 Sep 2011, H.Merijn Brand
     * NAME / DISTNAME in Makefile.PL
