@@ -1,6 +1,7 @@
 0.19	- 11 Feb 2015, H.Merijn Brand
     * Upped copyright to 2015
     * Move repo to github
+    * Remove perl recommendation from META as it breaks cpan clients
 
 0.18	- 07 Feb 2014, H.Merijn Brand
     * Upped copyright to 2012
