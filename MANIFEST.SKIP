@@ -2,6 +2,7 @@
 \.tgz$
 \.tar\.gz$
 \.releaserc
+\.travis.yml
 blib/
 cover_db/
 sandbox/
