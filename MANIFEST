@@ -3,6 +3,7 @@ MANIFEST
 Makefile.PL
 OutputFilter.pm
 README
+CONTRIBUTING.md
 t/00_pod.t
 t/01_pod.t
 t/20_margin.t
