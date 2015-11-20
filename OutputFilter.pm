@@ -193,7 +193,8 @@ sub CLOSE
 {
     my $self = shift;
     my ($pfx, $io, $sub, $line) = @{$self}{qw( pfx io sb line )};
-    $line ne "" and print { $io } _Filter_ (0, $pfx, $sub, $line);
+    defined $line && $line ne "" and
+	print { $io } _Filter_ (0, $pfx, $sub, $line);
     $self->{closed} or close $io;
     $self->{line} = "";
     $self->{closed} = 1;
