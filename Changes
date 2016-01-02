@@ -1,6 +1,7 @@
-0.20	- 20 Nov 2015, H.Merijn Brand
+0.20	- 02 Jan 2016, H.Merijn Brand
     * Add CONTRIBUTING.md
     * Do not print undefined lines on close
+    * It's 2016
 
 0.19	- 11 Feb 2015, H.Merijn Brand
     * Upped copyright to 2015
