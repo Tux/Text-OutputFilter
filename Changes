@@ -1,7 +1,8 @@
-0.21	- 01 Jan 2019, H.Merijn Brand
+0.21	- 23 Apr 2019, H.Merijn Brand
     * It is 2017
     * It is 2018
     * It is 2019
+    * Make PRINT return as print would (issue #1)
 
 0.20	- 12 May 2016, H.Merijn Brand
     * Add CONTRIBUTING.md

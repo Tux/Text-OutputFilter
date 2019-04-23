@@ -156,7 +156,7 @@ sub PRINT {
     my $line = $self->{line} . (join $fsep => @_) . $rsep;
     my @line = split m/\n/, $line, -1;
     $self->{line} = pop @line;
-    print { $io } _Filter_ (1, $pfx, $sub, $_) for @line;
+    print { $io } map { _Filter_ (1, $pfx, $sub, $_) } @line;
     } # PRINT
 
 sub PRINTF {
