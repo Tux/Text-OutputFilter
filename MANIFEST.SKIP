@@ -3,6 +3,7 @@
 \.tar\.gz$
 \.releaserc
 \.travis.yml
+\.whitesource
 blib/
 cover_db/
 sandbox/
