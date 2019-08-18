@@ -8,5 +8,5 @@ on "test" => sub {
     requires   "Test::More";
     requires   "Test::NoWarnings";
 
-    recommends "Test::More"               => "1.302164";
+    recommends "Test::More"               => "1.302166";
     };
