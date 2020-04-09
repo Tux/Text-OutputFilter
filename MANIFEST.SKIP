@@ -4,7 +4,9 @@
 \.releaserc
 \.travis.yml
 \.whitesource
+\.tmp$
 blib/
+doc/
 cover_db/
 sandbox/
 Makefile

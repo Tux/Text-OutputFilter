@@ -1,0 +1,67 @@
+STDIN(1)              User Contributed Perl Documentation             STDIN(1)
+
+
+
+[1mNAME[0m
+       OutputFilter - Enable post processing of output without fork
+
+[1mSYNOPSIS[0m
+        use Text::OutputFilter;
+
+        my $bucket = "";
+        tie *STDOUT, "Text::OutputFilter";
+        tie *HANDLE, "Text::OutputFilter", 4;
+        tie *HANDLE, "Text::OutputFilter", 4,  *STDOUT;
+        tie *STDOUT, "Text::OutputFilter", 4, \$bucket;
+        tie *OUTPUT, "Text::OutputFilter", 4,  *STDOUT, sub { "$_[0]" };
+
+[1mDESCRIPTION[0m
+       This interface enables some post-processing on output streams, like
+       adding a left margin.
+
+       The tied filehandle is opened unbuffered, but the output is line
+       buffered. The "tie" takes three optional arguments:
+
+       Left Margin
+           The left margin must be a positive integer and defaults to 4
+           spaces.
+
+       Output Stream
+           The output stream must be an already open stream, with writing
+           enabled. The default is *STDOUT. All input methods on the new
+           stream are disabled. If a reference to a scalar is passed, it will
+           be opened as PerlIO::scalar - in-memory IO, scalar IO. No checks
+           performed to see if your perl supports it. If you want it, and your
+           perl does not, upgrade.
+
+           Using "binmode ()" on the new stream is allowed and supported.
+
+           OPEN, SEEK, and WRITE are not (yet) implemented.
+
+       Line Modifying Function
+           The output is line buffered, to enable line-modifier functions.
+           The line (without newline) is passed as the only argument to the
+           sub-ref, whose output is printed after the prefix from the first
+           argument. A newline is printed after the sub-ref's output.
+
+           To [1mfilter [22ma line, as in [4mremove[24m it from the stream, make the sub
+           return [4mundef[24m.
+
+[1mTODO[0m
+       Tests, tests, tests.  Tests with older perls
+
+[1mAUTHOR[0m
+       H.Merijn Brand <h.m.brand@procura.nl>
+
+[1mCOPYRIGHT AND LICENSE[0m
+       Copyright (C) 2006-2020 H.Merijn Brand for PROCURA B.V.
+
+       This library is free software; you can redistribute it and/or modify it
+       under the same terms as Perl itself.
+
+[1mSEE ALSO[0m
+       [1mperl[22m(1), [1mperlopen[22m(1), 'open STDOUT, "|-"', Text::Filter
+
+
+
+perl v5.30.0                      2020-04-09                          STDIN(1)
