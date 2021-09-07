@@ -27,14 +27,14 @@
 
 <h1 id="SYNOPSIS">SYNOPSIS</h1>
 
-<pre><code> use Text::OutputFilter;
+<pre><code>use Text::OutputFilter;
 
- my $bucket = &quot;&quot;;
- tie *STDOUT, &quot;Text::OutputFilter&quot;;
- tie *HANDLE, &quot;Text::OutputFilter&quot;, 4;
- tie *HANDLE, &quot;Text::OutputFilter&quot;, 4,  *STDOUT;
- tie *STDOUT, &quot;Text::OutputFilter&quot;, 4, \$bucket;
- tie *OUTPUT, &quot;Text::OutputFilter&quot;, 4,  *STDOUT, sub { &quot;$_[0]&quot; };</code></pre>
+my $bucket = &quot;&quot;;
+tie *STDOUT, &quot;Text::OutputFilter&quot;;
+tie *HANDLE, &quot;Text::OutputFilter&quot;, 4;
+tie *HANDLE, &quot;Text::OutputFilter&quot;, 4,  *STDOUT;
+tie *STDOUT, &quot;Text::OutputFilter&quot;, 4, \$bucket;
+tie *OUTPUT, &quot;Text::OutputFilter&quot;, 4,  *STDOUT, sub { &quot;$_[0]&quot; };</code></pre>
 
 <h1 id="DESCRIPTION">DESCRIPTION</h1>
 
