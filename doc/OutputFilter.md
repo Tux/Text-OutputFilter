@@ -59,7 +59,7 @@ H.Merijn Brand <h.m.brand@procura.nl>
 
 # COPYRIGHT AND LICENSE
 
-Copyright (C) 2006-2022 H.Merijn Brand for PROCURA B.V.
+Copyright (C) 2006-2023 H.Merijn Brand for PROCURA B.V.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
