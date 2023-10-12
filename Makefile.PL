@@ -77,6 +77,6 @@ sub postamble {
 	'doc/OutputFilter.3:	OutputFilter.pm',
 	'	pod2man       < $? > $@',
 	'doc/OutputFilter.man:	doc/OutputFilter.3',
-	'	nroff -mandoc < $? > $@',
+	'	nroff2man     < $? > $@',
 	'';
     } # postamble
