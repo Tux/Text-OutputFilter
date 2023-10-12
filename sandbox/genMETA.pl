@@ -41,7 +41,7 @@ version:                 VERSION
 abstract:                Filter and modify output
 license:                 perl
 author:              
-    - H.Merijn Brand <h.m.brand@xs4all.nl>
+    - H.Merijn Brand <hmbrand@cpan.org>
 generated_by:            Author
 distribution_type:       module
 provides:
@@ -57,7 +57,7 @@ test_requires:
     Test::More:          0
     Test::NoWarnings:    0
 test_recommends:
-    Test::More:          1.302191
+    Test::More:          1.302195
 resources:
     license:             http://dev.perl.org/licenses/
     repository:          https://github.com/Tux/Text-OutputFilter
