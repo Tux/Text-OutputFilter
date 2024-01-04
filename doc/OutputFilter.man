@@ -52,7 +52,7 @@ AUTHOR
        H.Merijn Brand <h.m.brand@procura.nl>
 
 COPYRIGHT AND LICENSE
-       Copyright (C) 2006-2023 H.Merijn Brand for PROCURA B.V.
+       Copyright (C) 2006-2024 H.Merijn Brand for PROCURA B.V.
 
        This library is free software; you can redistribute it and/or modify it
        under the same terms as Perl itself.
@@ -60,4 +60,4 @@ COPYRIGHT AND LICENSE
 SEE ALSO
        perl(1), perlopen(1), 'open STDOUT, "|-"', Text::Filter
 
-perl v5.38.0                      2023-10-12                          STDIN(1)
+perl v5.38.2                      2024-01-04                          STDIN(1)
