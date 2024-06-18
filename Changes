@@ -1,6 +1,7 @@
-0.26	- 04 Jan 2024, H.Merijn Brand
+0.26	- 17 Jun 2024, H.Merijn Brand
     * Fix static doc for groff-1.24 fail
     * It is 2024
+    * Tested with perl-5.40
 
 0.25	- 06 Jan 2023, H.Merijn Brand
     * It is 2023
